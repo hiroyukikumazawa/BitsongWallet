@@ -1,12 +1,10 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
-import { useRouter, useFocusEffect } from 'expo-router';
 
 
-export default function Button({ label, bg = false }) {
-  const router = useRouter();
+export default function Button({ label, bg = false, clickEvent }) {
   return (
     <View style={bg ? [styles.buttonContainer, styles.backgroundBtn] : styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => router.push('/createWallet')}>
+      <Pressable style={styles.button} onPress={clickEvent}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
@@ -21,6 +19,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 4,
     paddingVertical: 7,
+    marginVertical: 5,
     borderColor: '#ff005c',
     borderWidth: 1,
     borderRadius: 10,
