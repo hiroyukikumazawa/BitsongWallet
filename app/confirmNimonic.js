@@ -18,7 +18,7 @@ export default function ConfirmNimonic() {
       return false;
     }
 
-    router.push('/')
+    router.push('/password')
   }
 
   return (
