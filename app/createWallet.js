@@ -11,6 +11,12 @@ export default function CreateWallet() {
   const handleShowNimonic = () => {
     setShowNimonic(true);
   }
+  const handleConfirmNimonic = () => {
+    if (!showNimonic) {
+      return false
+    }
+    router.push('/confirmNimonic');
+  }
   const router = useRouter();
   const nemonicKeys = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test10', 'test11', 'test12'];
   return (
@@ -37,7 +43,7 @@ export default function CreateWallet() {
         </View>
       </View>
       <View style={styles.continueBtn}>
-        <Button label={"Continue"} bg={true} clickEvent={() => router.push('/confirmNimonic')}/>
+        <Button label={"Continue"} bg={true} clickEvent={handleConfirmNimonic} />
         <Button label={"Back"} clickEvent={() => router.push('/')} />
       </View>
     </View>
