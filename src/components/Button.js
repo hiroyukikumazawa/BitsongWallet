@@ -1,9 +1,8 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
-
-export default function Button({ label, bg = false, clickEvent }) {
+export default function Button({ label, filled = false, clickEvent }) {
   return (
-    <View style={bg ? [styles.buttonContainer, styles.backgroundBtn] : styles.buttonContainer}>
+    <View style={filled ? [styles.buttonContainer, styles.backgroundBtn] : styles.buttonContainer}>
       <Pressable style={styles.button} onPress={clickEvent}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>

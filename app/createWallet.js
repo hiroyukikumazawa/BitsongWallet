@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-import { Link, Stack, useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { StyleSheet, Text, View, Button as Btn, Pressable } from 'react-native';
 
 import Button from '../src/components/Button';
@@ -43,7 +43,7 @@ export default function CreateWallet() {
         </View>
       </View>
       <View style={styles.continueBtn}>
-        <Button label={"Continue"} bg={true} clickEvent={handleConfirmNimonic} />
+        <Button label={"Continue"} filled={true} clickEvent={handleConfirmNimonic} />
         <Button label={"Back"} clickEvent={() => router.push('/')} />
       </View>
     </View>

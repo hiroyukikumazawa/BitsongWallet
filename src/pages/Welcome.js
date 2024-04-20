@@ -13,7 +13,7 @@ export default function Welcome() {
       />
       <Logo />
       <View style={styles.btnGroup}>
-        <Button label={"Create Wallet"} bg={true} clickEvent={() => router.push('/createWallet')} />
+        <Button label={"Create Wallet"} filled={true} clickEvent={() => router.push('/createWallet')} />
         <Button label={"Restore Wallet"} />
       </View>
     </View>
