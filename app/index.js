@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Welcome from './src/pages/Welcome';
+import Welcome from '../src/pages/Welcome';
+
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#14142e',
     width: '100%',
     justifyContent: 'space-evenly',

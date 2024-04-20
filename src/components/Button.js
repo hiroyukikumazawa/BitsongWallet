@@ -1,9 +1,12 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
+import { useRouter, useFocusEffect } from 'expo-router';
+
 
 export default function Button({ label, bg = false }) {
+  const router = useRouter();
   return (
     <View style={bg ? [styles.buttonContainer, styles.backgroundBtn] : styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+      <Pressable style={styles.button} onPress={() => router.push('/createWallet')}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
