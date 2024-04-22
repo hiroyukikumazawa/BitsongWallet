@@ -7,7 +7,7 @@ export default function Password() {
   const router = useRouter();
 
   const handleCreateWallet = () => {
-    router.push('/');
+    router.push('/home');
   }
 
   return (
