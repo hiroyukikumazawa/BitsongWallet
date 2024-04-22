@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@bitsongjs/client": "^2.4.0-beta.10",
     "@expo/metro-runtime": "~3.1.3",
     "@types/react": "~18.2.45",
     "expo": "~50.0.14",
