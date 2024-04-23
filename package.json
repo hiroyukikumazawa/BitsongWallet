@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "postinstall": "node_modules/.bin/rn-nodeify --install crypto --hack"
   },
   "dependencies": {
     "@bitsongjs/client": "^2.4.0-beta.10",
