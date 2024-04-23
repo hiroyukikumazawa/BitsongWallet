@@ -1,6 +1,6 @@
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Image, View, Text } from 'react-native';
 
-const LogoImage = require("../../assets/logo.svg");
+const LogoImage = require("../../assets/logo.png");
 
 export default function Logo() {
   return (
