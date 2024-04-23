@@ -37,7 +37,9 @@ export default function CreateWallet() {
           </View>
           <View style={showNimonic ? { display: 'none' } : styles.nimonicWapper}>
             <Text style={styles.wrapperTitle}>Write it down!</Text>
-            <Pressable style={styles.wrapperShow} onPress={handleShowNimonic}>SHOW</Pressable>
+            <Pressable style={styles.wrapperShow} onPress={handleShowNimonic}>
+              <Text>SHOW</Text>
+            </Pressable>
           </View>
           <Btn title='Copy' />
         </View>
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderRadius: 10,
     borderColor: '#f0f0f0',
-    borderStyle: 'soild',
+    borderStyle: 'solid',
     borderWidth: 1,
     padding: 10
   },
@@ -98,9 +100,9 @@ const styles = StyleSheet.create({
   nimonicWapper: {
     position: 'absolute',
     top: 0,
+    bottom: 0,
+    right: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
     zIndex: 1,
     borderRadius: 10,
     justifyContent: 'center',
